@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pasangngi Kang</title>
+  <link rel="stylesheet" href="confes.css">
+</head>
+<body>
+
+<audio id="background-music" src="musik surat cinta.mp3"></audio>
+
+<!-- LOADING -->
+<div id="loading" class="loading hidden">
+  <div class="loaderBar"></div>
+  <p class="loading-text">Lagi kubuka pesanta…</p>
+</div>
+
+<!-- POPUP 0 -->
+<div id="popup0" class="popup hidden">
+  <div class="popup-header">Message</div>
+  <div class="popup-content">
+    <img src="Stiker 1 (SFILE.MOBI).gif">
+    <p>Login dolo nak buka pesanta 😊</p>
+    <input id="nameInput" type="text" placeholder="Tulis nama panggilanta..." />
+  </div>
+  <div class="popup-footer">
+    <button onclick="saveName()">Lanjut ji</button>
+  </div>
+</div>
+
+<!-- POPUP 1 -->
+<div id="popup1" class="popup hidden">
+  <div class="popup-header">Message</div>
+  <div class="popup-content">
+    <img src="Stiker 1 (SFILE.MOBI).gif">
+    <h3 id="typing-text"
+       data-text="Hay {nama}… ada ji sesuatu mau kusampeang. Semoga {nama} baca sampe selesai yaa…">
+    </h3>
+  </div>
+  <div class="popup-footer">
+    <button onclick="showNextPopup('popup1','popup2','typing-text-2','typing-text-3')">
+      Apa itu?
+    </button>
+  </div>
+</div>
+
+<!-- POPUP 2 -->
+<div id="popup2" class="popup hidden">
+  <div class="popup-header">Message</div>
+  <div class="popup-content">
+    <img src="Stiker 36 (SFILE.MOBI).gif">
+    <h3 id="typing-text-2"
+        data-text="Sebenerna sudah lama kupendem perasaanku ini."></h3>
+    <h3 id="typing-text-3"
+        data-text="Setiap ada ki {nama}, hatiku jadi lebih tenang na nyaman 👉👈."></h3>
+  </div>
+  <div class="popup-footer">
+    <button onclick="showNextPopup('popup2','popup3','typing-text-4')">
+      Sama ji perasaanku 🥺
+    </button>
+  </div>
+</div>
+
+<!-- POPUP 3 -->
+<div id="popup3" class="popup hidden">
+  <div class="popup-header">Message</div>
+  <div class="popup-content">
+    <img src="Stiker 15 (SFILE.MOBI).gif">
+    <h3 id="typing-text-4"
+        data-text="Tidak ji kupaksa apa-apa. Cuma mauka lebih dekat sama ki {nama}.">
+    </h3>
+  </div>
+
+  <div class="popup-footer popup-footer-relative">
+    <button onclick="showNextPopup('popup3','popup4','typing-text-5')">
+      Iyo, mauka 🤍
+    </button>
+
+    <button id="btnNo" class="btn-kabur" onclick="handleNoClick()">
+      Belum siapka
+    </button>
+  </div>
+</div>
+
+<!-- POPUP 4 -->
+<div id="popup4" class="popup hidden">
+  <div class="popup-header">Message</div>
+  <div class="popup-content">
+    <img src="Stiker 2 (SFILE.MOBI).gif">
+    <h3 id="typing-text-5"
+        data-text="Tarima kasi sudah terima perasaanku ini 🤍"></h3>
+  </div>
+  <div class="popup-footer">
+    <button onclick="showNextPopup('popup4','popup5','typing-text-6','typing-text-7')">
+      Sayangki 🤍
+    </button>
+  </div>
+</div>
+
+<!-- POPUP 5 -->
+<div id="popup5" class="popup hidden">
+  <div class="popup-header">Message</div>
+  <div class="popup-content">
+    <img src="Stiker 41 (SFILE.MOBI).gif">
+    <h3 id="typing-text-6"
+        data-text="Semoga ini jadi awal baik buatki berdua."></h3>
+    <h3 id="typing-text-7"
+        data-text="Pelan-pelan ji, tapi pasti dan serius 🤍"></h3>
+  </div>
+  <div class="popup-footer">
+    <button id="wa-btn" onclick="openWhatsApp()">Aamiin 🤍</button>
+  </div>
+</div>
+
+<!-- POPUP RAHASIA -->
+<div id="popup6" class="popup hidden">
+  <div class="popup-header">Message</div>
+  <div class="popup-content">
+    <img src="Stiker 32 (SFILE.MOBI).gif">
+    <h3 id="typing-text-8"
+        data-text="Kumengerti ji, kalau masih butuh waktu. Tarima kasi sudah jujur 🤍">
+    </h3>
+  </div>
+  <div class="popup-footer">
+    <button id="wa-code-btn" onclick="openWhatsAppCode()">Peluk Virtual 🤍</button>
+  </div>
+</div>
+
+<button id="show-popup-btn" class="show-popup-btn" onclick="startStory()">
+  📩
+  <p>Pesan belumpa dibaca!</p>
+</button>
+
+<script src="confes.js"></script>
+</body>
+</html>
