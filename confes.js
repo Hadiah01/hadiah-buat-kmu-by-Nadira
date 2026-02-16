@@ -99,14 +99,14 @@ async function showNextPopup(current, next, ...typingIds) {
 
 /* WHATSAPP */
 function openWhatsApp() {
-  const phoneNumber = "628xxxxxxxxxx";
+  const phoneNumber = "6282394717127";
   const message = `Iyo, mauka serius sama ki 🤍`;
   const encodedMessage = encodeURIComponent(message);
   window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
 }
 
 function openWhatsAppCode() {
-  const phoneNumber = "628xxxxxxxxxx";
+  const phoneNumber = "6282394717127";
   const message = `Tarima kasi sudah buka pesanta 🤍`;
   const encodedMessage = encodeURIComponent(message);
   window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
